@@ -1,0 +1,25 @@
+title 0.6: New note spa 
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+server-->browser: HTTP 201 created
+
+
+note over browser
+the form data is sent using js-code
+that add the note to note list,
+reload the note list in the page 
+and sends the new note to server
+end note
+
+note over browser:
+the request POST contains the new note in JSON data
+that contains content and date
+the Content-Type header tells the server 
+that the included data is represented in JSON format
+end note
+
+note over browser
+the Content-Type is sent using js-code
+that sends the data as JSON-string
+end note
+

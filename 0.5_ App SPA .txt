@@ -1,0 +1,22 @@
+title 0.5: App SPA 
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+server-->browser: HTML-code
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->browser: main.css
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+server-->browser: spa.js
+
+note over browser:
+the HTML code is obtained from server
+that HTML code is manipulated from js-code from browser
+end note
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->browser: [{content: "ihan ok", date: "2022-01-17T16:41:14.629Z"},…]
+
+note over browser:
+browser is not reload when add a note.
+The event handler create a new note 
+and adds the new note to note list 
+end note
